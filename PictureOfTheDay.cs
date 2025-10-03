@@ -11,6 +11,8 @@ public class PictureOfTheDay
     {
         using (var client = new HttpClient())
         {
+            // Käytetty DEMO_KEY:tä!
+            // Ohjelma ei ehkä toimi oikein, koska pyyntöjen määrä on rajoitettu!
             var response = await client.GetAsync("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=" + date);
             if (!response.IsSuccessStatusCode)
             {
